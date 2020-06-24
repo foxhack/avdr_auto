@@ -1,0 +1,1 @@
+<11>Feb  4 16:24:33 localhost waf: tag:waf_log_l4acl stat_time:2017-02-04 16:24:27  alertlevel:LOW  event_type:IP_ACL  dst_ip:172.17.100.105  dst_port:80  src_ip:172.17.202.127  src_port:59280  protocol:tcp  policy_id:33826610  policy_desc:eth1  action:Forward  count_num:2

@@ -1,0 +1,58 @@
+[
+    {
+        "category": "信息泄露类型:信息泄露",
+        "name": "检测到目标web应用登陆表单中存在用户名或者密码信息",
+        "occurs": 2,
+        "score": 5,
+        "level": 2,
+        "description": "检测到目标站点的登陆form表单中存在用户名或者密码此类的敏感信息，从而造成站点的敏感信息泄露。攻击者利用此信息可对目标站点进行进一步有效的攻击。",
+        "solution": "清除掉登陆form单中的用户名或者密码数据。 ",
+        "publish_time": "2018-09-26"
+    },
+    {
+        "category": "信息泄露类型:信息泄露",
+        "name": "检测到目标URL存在电子邮件地址模式",
+        "occurs": 3,
+        "score": 1,
+        "level": 1,
+        "description": "Spambot 搜寻因特网站点，开始查找电子邮件地址来构建发送自发电子邮件（垃圾邮件）的邮件列表。 如果检测到含有一或多个电子邮件地址的响应，可供利用以发送垃圾邮件。 而且，找到的电子邮件地址也可能是专用电子邮件地址，对于一般大众应是不可访问的。。",
+        "solution": "从 Web 站点中除去任何电子邮件地址，使恶意的用户无从利用。",
+        "publish_time": "2018-09-26"
+    },
+    {
+        "category": "其他",
+        "name": "Apache Tomcat DIGEST身份验证多个安全漏洞(CVE-2012-3439)",
+        "occurs": 1,
+        "score": 8,
+        "level": 3,
+        "description": "Apache Tomcat是一个流行的开放源码的JSP应用服务器程序。Apache Tomcat 7.0.0-7.0.27、6.0.0-6.0.35、5.5.0-5.5.35存在多个安全漏洞，成功利用后可允许攻击者绕过安全限制并执行非法操作。",
+        "solution": "请更新到5.5.36、6.0.36、7.0.30",
+        "publish_time": "2012-11-17",
+        "cnnvd_list": ["CNNVD-201211-127"],
+        "cve_list": ["CVE-2012-3439"]
+    },
+    {
+        "category": "远程信息泄露",
+        "name": "Apache Tomcat HTTP Digest Access Authentication安全限制绕过漏洞",
+        "occurs": 1,
+        "score": 5,
+        "level": 2,
+        "description": "Apache Tomcat是一个流行的开放源码的JSP应用服务器程序。Apache Tomcat 5.5.34、6.0.33、7.0.12之前版本在HTTP Digest Access Authentication的DigestAuthenticator.java实现上存在安全漏洞，攻击者可利用此漏洞绕过密码保护机制。",
+        "solution": "目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://jakarta.apache.org/tomcat/index.html",
+        "publish_time": "2011-02-07",
+        "cnnvd_list": ["CNNVD-201201-176", "CNNVD-201201-175", "CNNVD-201201-174"],
+        "cve_list": ["CVE-2011-5064", "CVE-2011-5063", "CVE-2011-5062"],
+        "cncve_list": ["CNCVE-20115064", "CNCVE-20115063", "CNCVE-20115062"],
+        "cnvd_list": ["CNVD-2012-0224", "CNVD-2012-4675", "CNVD-2012-4672"]
+    },
+    {
+        "category": "test合规性",
+        "name": "test合规性",
+        "occurs": 1,
+        "score": 0,
+        "level": 0,
+        "description": "Apache Tomcat是一个流行的开放源码的JSP应用服务器程序。Apache Tomcat 5.5.34、6.0.33、7.0.12之前版本在HTTP Digest Access Authentication的DigestAuthenticator.java实现上存在安全漏洞，攻击者可利用此漏洞绕过密码保护机制。",
+        "solution": "目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://jakarta.apache.org/tomcat/index.html",
+        "publish_time": "2011-02-07"
+    }
+]

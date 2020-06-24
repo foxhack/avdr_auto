@@ -1,0 +1,162 @@
+{
+  "name": "AP_锐捷_通用_1",
+  "createtime": 1505699766506,
+  "assetType": {
+    "name": "Linux",
+    "createtime": 1505699919491,
+    "lasttime": 1505699919491,
+    "id": "B0IB65OD000a",
+    "parentId": "6JAMVDVH0008"
+  },
+  "description": "DHCP地址分配日志解析规则",
+  "normalize": [{
+    "mappings": [],
+    "field": "event_name",
+    "result": "DHCP地址分配",
+    "value": "",
+    "index": "event_name"
+  }, {
+    "mappings": [],
+    "field": "event_level",
+    "result": "0",
+    "value": "",
+    "index": "event_level"
+  }, {
+    "mappings": [],
+    "field": "src_address",
+    "result": "172.16.101.62",
+    "value": "",
+    "index": "2"
+  }, {
+    "mappings": [{
+      "mappingType": "TIME",
+      "orgValue": "",
+      "mappingValue": "MMM dd HH:mm:ss"
+    }],
+    "field": "occur_time",
+    "result": "Mar  1 18:08:43",
+    "value": "",
+    "index": "1"
+  }, {
+    "mappings": [],
+    "field": "vendor",
+    "result": "锐捷",
+    "value": "",
+    "index": "vendor"
+  }, {
+    "mappings": [],
+    "field": "product",
+    "result": "AP",
+    "value": "",
+    "index": "product"
+  }, {
+    "mappings": [],
+    "field": "src_mac",
+    "result": "d07e.3593.104d",
+    "value": "",
+    "index": "4"
+  }, {
+    "mappings": [],
+    "field": "src_mask",
+    "result": "255.255.255.0",
+    "value": "",
+    "index": "3"
+  }, {
+    "mappings": [],
+    "field": "original_log",
+    "result": "<190> *Mar  1 18:08:43: %DHCPD-6-ADDRESS_ASSIGN: Interface BVI 1 assigned DHCP address 172.16.101.62, mask 255.255.255.0, Mac d07e.3593.104d",
+    "value": "",
+    "index": "original_log"
+  }],
+  "lasttime": 1505699766506,
+  "parser": {
+    "value": "((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s+\\d{1,2}\\s+\\d{2}:\\d{2}:\\d{2}):\\s+%DHCPD-6-ADDRESS_ASSIGN:\\s+Interface\\s+.*?\\s+assigned\\s+DHCP\\s+address\\s+((?:\\d{1,3}\\.){3}\\d{1,3}),\\s+mask\\s+((?:\\d{1,3}\\.){3}\\d{1,3}),\\s+Mac\\s+(\\w{4}\\.\\w{4}\\.\\w{4})",
+    "filter": [{
+      "fields": {
+        "event_name": "DHCP地址分配"
+      },
+      "name": "addFields"
+    }, {
+      "fields": {
+        "event_level": "0"
+      },
+      "name": "addFields"
+    }, {
+      "fields": {
+        "vendor": "锐捷"
+      },
+      "name": "addFields"
+    }, {
+      "fields": {
+        "product": "AP"
+      },
+      "name": "addFields"
+    }],
+    "name": "orgRegex"
+  },
+  "properties": [{
+    "format": null,
+    "name": "事件级别",
+    "key": "event_level",
+    "id": "1b5e11c6-2242-4337-9f36-8b12b3d564db",
+    "sample": "信息",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "事件名称",
+    "key": "event_name",
+    "id": "a6cf5a5a-8102-46a7-b26f-12f97ebbd0b4",
+    "sample": "DHCP地址分配",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "发生时间",
+    "key": "occur_time",
+    "id": "6c5a5f80-ae7f-432b-b627-d73ffd99dc00",
+    "sample": "1488362923000",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "原始日志",
+    "key": "original_log",
+    "id": "be9f63d1-b8b5-40e9-9f53-83f4f82816ca",
+    "sample": "<190> *Mar  1 18:08:43: %DHCPD-6-ADDRESS_ASSIGN: Interface BVI 1 assigned DHCP address 172.16.101.62, mask 255.255.255.0, Mac d07e.3593.104d",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "产品",
+    "key": "product",
+    "id": "405b1095-d496-4ce3-950f-3b6ef6602113",
+    "sample": "AP",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "源地址",
+    "key": "src_address",
+    "id": "9a13ea39-84b8-4098-9b7e-346959c55c33",
+    "sample": "172.16.101.62",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "源MAC",
+    "key": "src_mac",
+    "id": "16183599-cfe6-43f2-baed-086efbbef346",
+    "sample": "d07e.3593.104d",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "源子网掩码",
+    "key": "src_mask",
+    "id": "3866b93a-5a56-4870-a749-e14d67d5b1f6",
+    "sample": "255.255.255.0",
+    "type": "string"
+  }, {
+    "format": null,
+    "name": "厂商",
+    "key": "vendor",
+    "id": "cbbc4008-dfa1-4aaf-9af2-516960ba096c",
+    "sample": "锐捷",
+    "type": "string"
+  }],
+  "sample": "<190> *Mar  1 18:08:43: %DHCPD-6-ADDRESS_ASSIGN: Interface BVI 1 assigned DHCP address 172.16.101.62, mask 255.255.255.0, Mac d07e.3593.104d"
+}
